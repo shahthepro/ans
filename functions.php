@@ -92,7 +92,7 @@ function fetch_feeds($args = array()) {
         $url = $host_url . '//category/' . $category;
     }
 
-    $feeds = json_decode(file_get_contents($host_url));
+    $feeds = json_decode(file_get_contents($url));
 
     $feeds = array_map(function ($item) {
         // Mapping default values
