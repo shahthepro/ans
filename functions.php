@@ -85,11 +85,11 @@ function fetch_feeds($args = array()) {
     $url = $host_url;
 
     if ($status !== 'all') {
-        $url = $url . '//status/' . $status;
+        $url = $url . '/status/' . $status;
     }
 
     if ($category !== '') {
-        $url = $host_url . '//category/' . $category;
+        $url = $host_url . '/category/' . $category;
     }
 
     $feeds = json_decode(file_get_contents($url));
